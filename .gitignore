@@ -1,0 +1,88 @@
+# Dependências do Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de build
+dist/
+build/
+out/
+.next/
+
+# Docker
+.dockerignore
+
+# Logs
+logs/
+*.log
+
+# Dados de execução
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Cobertura de testes
+coverage/
+*.lcov
+
+# Cobertura nyc
+.nyc_output/
+
+# Cache do TypeScript
+*.tsbuildinfo
+
+# Cache do npm
+.npm
+
+# Histórico do REPL
+.node_repl_history
+
+# Arquivos empacotados
+*.tgz
+
+# Arquivo de integridade do Yarn
+.yarn-integrity
+
+# Cache do parcel
+.cache
+.parcel-cache
+
+# Testes do VSCode
+.vscode-test
+
+# Pastas temporárias
+tmp/
+temp/
+
+# Arquivos do sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Arquivos de IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Arquivos de banco de dados
+*.sqlite
+*.db
+
+# Volumes do Docker
+postgres_data/
