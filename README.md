@@ -16,7 +16,7 @@ Projeto fullstack com Docker contendo API NestJS, Frontend React e PostgreSQL.
 - Docker Compose
 - Git
 
-## 🚀 Como Executar
+## Como Executar
 
 ### Passo 1: Clone o repositório
 ```bash
@@ -46,7 +46,7 @@ docker exec -it brands_postgres psql -U postgres -d brands_db
 
 ## Endpoints da API
 
-### Base URL: `http://localhost:3001/api`
+### Base URL: `http://localhost:3001`
 
 | Método | Endpoint | Descrição |
 |--------|----------|-----------|
@@ -154,22 +154,33 @@ docker compose down -v
 docker compose down -v --rmi all
 ```
 
-##  Testando a API
+## Testando a API
 
-Acesse o Swagger em: http://localhost:3001/api
+**Swagger:** http://localhost:3001/api
 
-Ou use curl:
+**Exemplos com curl:**
 ```bash
-# Listar marcas
-curl http://localhost:3001/api/brands
+# Listar todas as marcas
+curl http://localhost:3001/brands
 
-# Criar marca
-curl -X POST http://localhost:3001/api/brands \
+# Buscar marca por ID
+curl http://localhost:3001/brands/1
+
+# Criar nova marca
+curl -X POST http://localhost:3001/brands \
   -H "Content-Type: application/json" \
   -d '{"name":"Tesla","expertise":"Carros elétricos","year_founded":2003,"active":true}'
+
+# Atualizar marca
+curl -X PUT http://localhost:3001/brands/1 \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Tesla Motors","active":false}'
+
+# Deletar marca
+curl -X DELETE http://localhost:3001/brands/1
 ```
 
-## 📝 Variáveis de Ambiente
+## Variáveis de Ambiente
 
 Configuradas no arquivo `.env`:
 
@@ -188,7 +199,7 @@ DB_HOST=postgres
 FRONTEND_PORT=3000
 ```
 
-## 🗄️ Conexão com PostgreSQL
+## Conexão com PostgreSQL
 
 **Dados para conectar:**
 - **Host**: localhost

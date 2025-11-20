@@ -60,6 +60,12 @@ coverage/
 # Testes do VSCode
 .vscode-test
 
+# Configurações do VS Code
+.vscode/
+
+# Arquivos de teste
+teste-postgres.md
+
 # Pastas temporárias
 tmp/
 temp/
